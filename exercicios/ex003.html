@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head lang="pt-br">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de JS</title>
+  <style>
+  body {
+    background-color: lightblue;
+    padding: 20px;
+  }
+  </style>
+</head>
+<body>
+    <h1>String e Number</h1>
+    <p></p>
+  <script>
+  var n1 = Number(window.prompt('Digite um número: '))
+  var n2 = Number(window.prompt('Digite outro número: '))
+  /*
+  .prompt retorna string
+  
+  -> Para converter String em Number, utilize:
+  Number.parseInt() -> Retorna um número inteiro
+  Number.parseFloat() -> Retorna um número real
+  Number() -> Retorna um número inteiro ou real
+  
+  -> Para converter Number em String, utilize:
+  String() -> Retorna uma string
+  .toString() -> Retorna uma String
+  */
+  var s = n1 + n2
+  window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // usando graze e ${} placeholder -> template string
+  </script>
+</body>
+</html>

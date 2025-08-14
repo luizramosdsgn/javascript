@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de JS</title>
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    color: #f3f3f3;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    height: 100dvh;
+    width: fit-content;
+  }
+  div.enter {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  
+  div.enter > input {
+    width: 100%;
+    padding: .75em 1em .75em 1em;
+    border: .75px solid #ff8100;
+    border-radius: 50px;
+    background-color: #ff810015;
+    color: #f3f3f3;
+    width: 120px;
+  }
+  main > input {
+    width: 100%;
+    padding: .75em 0 .75em 0;
+    border: none;
+    border-radius: 50px;
+    background-color: #ff8100;
+    color: #f3f3f3;
+  }
+  </style>
+</head>
+<body>
+  <main>
+  <h1>Somando valores</h1>
+    <div class="enter">
+      <input type="number" name="txtn1" id="txtn1"> <h2>+</h2>
+  <input type="number" name="txtn2" id="txtn2">
+    </div>
+    <input type="button" value="Somar" onclick="somar()">
+  <div id="res">Resultado</div>
+  </main>
+  <script>
+  function somar(){
+    var tn1 = document.getElementById('txtn1')
+    var tn2 = document.querySelector('input#txtn2')
+    var res = document.getElementById('res')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var s = n1 + n2
+    res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+  }
+  </script>
+</body>
+</html>

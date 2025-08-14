@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+<!--
+     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+  
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #222222;
+            color: #f3f3f3;
+            height: 100dvh;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Personalização da div#pai */
+        div#pai {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            margin: 0 auto;
+            padding: 1.5em 0;
+            border: 1px solid #ff8100;
+            border-radius: 10px;
+            align-items: center;
+            background-color: #ff800015;
+            text-align: center;
+        }
+
+        /* Estilo do Input */
+        div > p {
+            margin: 1em 0;
+        }
+        div > p > input {
+            font-size: 1em;
+            font-weight: semibold;
+            border-width: 0px 0px .75px 0px;
+            border-style: solid;
+            border-color: #ff8100;
+            background-color: #342A1F;
+            color: #ff8100;
+            width: 70px;
+        }
+        div > p > input:focus {
+            outline: none;
+        }
+
+        /* Personalização do Botão */
+        div > input{ 
+            width: 200px;
+            padding: .75em 0 .75em 0;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+            background-color: #ff8100;
+            color: #f3f3f3;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        div > input:hover {
+            transform: translateY(-2px);
+        }
+
+        .aviso {
+            padding: .5em 1em;
+            border: 1px solid #ff0000;
+            background-color: #ff000020;
+            border-radius: 5px;
+        }
+    </style>
+-->
+</head>
+<body>
+    <div id="pai">
+        <h1>
+            Sistema de Multas
+        </h1>
+        <p>
+            Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+        </p>
+        <input type="button" value="Verificar" onclick="calcular()">
+        <div id="res"></div>
+    </div>
+    <script>
+        function calcular() {
+            var txtv = document.getElementById('txtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km</strong></p>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade.</p>`
+            }
+            res.innerHTML += `<p class="aviso">Diriga sempre com <strong>cinto de segurança!</strong></p>`
+        }
+    </script>
+</body>
+</html>
