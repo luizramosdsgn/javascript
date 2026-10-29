@@ -1,31 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-<head lang="pt-br">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso de JS</title>
-  <style>
-    body {
-    padding: 20px;
-    background-color: #151515;
-    color: rgba(255, 255, 255, .70);
-  }
-  </style>
-</head>
-<body>
-  <h1>Formatando letras e números</h1>
-  <script>
-  var nome = window.prompt('Qual seu nome?')
-  document.writeln(`Olá, <strong></>${nome}</strong>! Seu nome tem ${nome.length} letras.`) // .length -> Quantos caracteres a string tem
-  document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()}`) // .toUpperCase() -> Tudo para 'MAIÚSCULAS'
-  document.writeln(`Seu nome em minúsculas é ${nome.toLowerCase()}`) // .toLowerCase() -> Tudo para 'minúsculas'
-  
-  /*
+	<head lang="pt-br">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Curso de JS</title>
+		<style>
+			body {
+				padding: 20px;
+				background-color: #151515;
+				color: rgba(255, 255, 255, 0.7);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Formatando letras e números</h1>
+		<script>
+			var nome = window.prompt("Qual seu nome?");
+			document.writeln(
+				`Olá, <strong></>${nome}</strong>! Seu nome tem ${nome.length} letras.`,
+			); // .length -> Quantos caracteres a string tem
+			document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()}`); // .toUpperCase() -> Tudo para 'MAIÚSCULAS'
+			document.writeln(`Seu nome em minúsculas é ${nome.toLowerCase()}`); // .toLowerCase() -> Tudo para 'minúsculas'
+
+			/*
   Formatando números
   -> .toFixed() define o número de casas decimais
   -> .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) converte um número para o formato de Real Brasileiro
   */
-  </script>
-</body>
+		</script>
+	</body>
 </html>
