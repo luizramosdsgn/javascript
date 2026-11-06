@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hora do Dia</title>
+  <style>
+
+    body{
+      background-color: #151515;
+      color: rgba(255, 255, 255, .80);
+      font-family: Arial, sans-serif;
+    }
+    header {
+      text-align: center;
+    }
+    section{
+      background-color: #3179FF;
+      border-radius: 10px;
+      padding: 14px;
+      width: 500px;
+      margin: auto;
+
+      div {
+        text-align: center;
+        margin: auto;
+      }
+    }
+    img#img {
+      width: 250px;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      font-style: italic;
+    }
+    
+  </style>
+</head>
+<body onload="carregar()">
+  <header>
+
+    <h1>Hora do dia</h1>
+
+  </header>
+
+  <Section id="sec">
+
+    <div>
+      <p id="msg">Aqui vai aparecer a mensagem</p>
+    </div>
+
+    <div>
+      <img id="img" src="" alt="Foto do dia">
+    </div>
+
+  </Section>
+
+  <footer>
+
+    <p>&#169; Curso em Vídeo</p>
+  </footer>
+
+  
+  <script>
+
+    // console.log(window.document.getElementById('msg').innerText)
+
+    function carregar() {
+      var sec = window.document.getElementById('sec')
+      var msg = window.document.getElementById('msg')
+      var img = window.document.getElementById('img')
+      var data = new Date()
+      var hora = data.getHours()
+      // var hora = 8
+      msg.innerText = `Agora são ${hora} horas.`
+
+      if (hora >= 0 && hora < 12) {
+        // Bom dia
+        img.src = 'manha.png'
+        sec.style.background = '#F9A31C'
+      } else if (hora >= 12 && hora <= 18) {
+        // Boa tarde
+        msg.style.color = '#151515'
+        img.src = 'tarde.png'
+        sec.style.background = '#EAE9E5'
+      } else {
+        // Boa noite
+        img.src = 'noite.png'
+        sec.style.background = '#1E231F'
+      }
+    }
+
+  </script>
+</body>
+</html>
